@@ -1,20 +1,38 @@
 # Overview
-We have individual tree pointclouds for all 16 plots that we got back from Sylvera. They used Raycloudtools for instance segmentation.
-We will use the pointclouds we got from them to extract the trees from the full plot pointcloud. That way we have the individual tree pointclouds that are filtered the way we prefer, as well as a leftover pointcloud.
+
+We have individual tree point clouds for all 16 plots from Sylvera, generated using RayCloudTools for instance segmentation and QAed by an extarnal company. Our goal is to use these segmented tree point clouds to extract trees from our own full-plot point clouds. This will give us:
+
+- Filtered, individual tree point clouds formatted to our specifications  
+- A remaining “leftover” point cloud of non-tree points
 
 # Methods
-## 1. Prepare the pointclouds
-### 1.a Select the plot with 20m buffer & 1cm ds
-Look at [part 4 of the general RiSCAN PRO manual](https://github.com/qforestlab/riscan-general/blob/main/4_select_plot_point_cloud.md) for this.
 
-### 1.b Import the pointclouds
-In RiSCAN PRO, make a new scanposition in which you import a few or all of the pointclouds. Make sure to import in the correct CRS. 
+## 1. Prepare the Point Clouds
 
-### 1.c Align pointclouds from Sylvera with our plot
-You can use the transformation matrix Sylvera gave us for this. However, make sure to check if this is correct. If not, align the pointclouds using MSA and manually adjust on failure.
-If you worked with some of the pointclouds for clearer view, you should now have a correct SOP matrix which you can export. Now load all pointclouds and use the correct SOP matrix to align all the pointclouds. 
+### 1.a Select the Plot (20 m Buffer, 1 cm ds)
+Follow [Part 4 of the general RiSCAN PRO manual](https://github.com/qforestlab/riscan-general/blob/main/4_select_plot_point_cloud.md) to create a 20 m buffered plot at 1 cm downsampling.
 
-Now you can export all the pointclouds with the correct position.
+### 1.b Import Point Clouds into RiSCAN PRO
+1. In RiSCAN PRO, create a new scanposition.  
+2. Import the desired point clouds (one or multiple) into this scanposition.  
+3. Ensure you select the correct Coordinate Reference System (CRS) during import.
 
-## 2. Run the propagation
+### 1.c Align Sylvera’s Point Clouds to Our Plot
+1. Use Sylvera’s SOP matrix (transformation matrix) to align their point clouds to our plot.  
+2. Verify the alignment visually. If it is incorrect:  
+   - Run MSA 
+   - Adjust the SOP matrix manually on failure, until the fit is satisfactory  
+3. Once one point cloud is correctly aligned, export the validated SOP matrix.  
+4. Import all point clouds and apply this SOP matrix for batch alignment.  
+5. Finally, export all aligned point clouds with the correct positions.
 
+## 2. Run the Propagation Script
+
+1. Clone or navigate to the [treeseg_propagation repository](https://github.com/qforestlab/treeseg_propagation).  
+2. Review the instructions in the README.  
+3. The script you need for this propagation is `tree_extraction.py` ([source link](https://github.com/qforestlab/treeseg_propagation/blob/master/tree_extraction.py)).  
+4. Set up a Python virtual environment and install the required packages.
+5. Run the script.
+6. Expect the process to take **1–2 hours** for one plot.
+
+---
