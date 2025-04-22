@@ -1,60 +1,81 @@
-# Segmentation preperation
-## 1. Select trees within AOI (40x90m)
-For this step run all scripts in order from the [plot_selection repository](https://github.com/qforestlab/plot_selection).
+# Overview
 
-## 2. Import pointclouds in RiSCAN PRO.
-### 2.a Open RiSCAN PRO and click "New Project".
-![image](https://github.com/user-attachments/assets/047abe2c-e552-45ec-9283-60cea157a84c)
-Save the project locally with an appropriate name.
-![image](https://github.com/user-attachments/assets/f5c60b46-2ea7-4a8c-9e5d-451cb18ab3d9)
+We’re preparing our individual tree point clouds for segmentation by:
 
-### 2.b Adjust the CRS
-Click the project name on the left, go to Edit>Attributes>Coordinate Reference Systems.
-Open the NQLD.gfx file in GeoSysMnnager database file and click "yes". The file will be on the shares
-![image](https://github.com/user-attachments/assets/b094947c-3642-48bc-86ea-2c8c7ddf38f4)
-Set the settings to this:
-![image](https://github.com/user-attachments/assets/49655251-ec08-4177-ba84-a049ed6d42db)
+- Selecting individual trees within a 40 × 90 m Area of Interest (AOI)  
+- Importing all point clouds into RiSCAN PRO with the correct CRS  
+- Generating crown‐hull shapefiles for each tree  
+- Configuring the shapefile in QGIS for manual segmentation
 
-### 2.c Import the pointclouds
-Right click Objects>Pointclouds and click on "import".
-Select all the individual trees and the leftover pointcloud.
-![image](https://github.com/user-attachments/assets/56e13ee1-590f-47d9-8419-dd91619e98a7)
-Make sure to select WGS84 / UTM zone 55S as a CRS and toggle off "combine files".
-![image](https://github.com/user-attachments/assets/f3d04ae8-6210-431d-9c71-d55dfcdadf77)
+# Methods
 
-It might take some time importing all pointclouds, you can continue with the next step while this is running.
+## 1. Select Trees within the AOI (40 × 90 m)
 
-## 3. Make hull map of individual trees.
-### 3.a Make a map of the crown hulls of the individual trees.
-For this step, you have to run the Get-shape-file-crowns.Rmd file (on the shares). 
-Change the folder paths to where all the individual tree pointclouds are.
+Run all scripts **in order** from the [plot_selection repository](https://github.com/qforestlab/plot_selection) to extract the trees that fall inside the 40 × 90 m AOI.
 
-### 3.b Open the shapefile in QGIS
-You will have to set the layer-CRS to UTM ZONE 55S.
-Your map should look simple like this:
-![image](https://github.com/user-attachments/assets/94a60f0b-de5d-492d-b1c6-e26bc2833be7)
+## 2. Import Point Clouds into RiSCAN PRO
 
-We will now change some settings to make the segmenting easier.
+### 2.a Create a New Project
 
-Go to attribute table, toggle the edit button and select "add field". 
-Now add a column called "Segmented" and make it boolean.
-![image](https://github.com/user-attachments/assets/7463e8b3-0818-434f-8d9d-39df96e7b14a)
+1. Open **RiSCAN PRO** and click **New Project**.  
+   ![Create new project](https://github.com/user-attachments/assets/047abe2c-e552-45ec-9283-60cea157a84c)  
+2. Save the project locally under a descriptive name.  
+   ![Save project](https://github.com/user-attachments/assets/f5c60b46-2ea7-4a8c-9e5d-451cb18ab3d9)
 
-All trees should automatically have value NULL, that's fine you can leave it like this.
-![image](https://github.com/user-attachments/assets/de5a331c-5d9e-4a6f-bfab-dcfe368c6544)
+### 2.b Set the Coordinate Reference System
 
-Click save and toggle the edit button off again.
-Close the attribute table and double click the layer to open it's settings.
+1. In the project manager, select your project name.  
+2. Navigate to **Edit → Attributes → Coordinate Reference Systems**.  
+3. In the GeoSysManager database, open **NQLD.gfx** and confirm. (You can find the NQLD.gfx file on the shares.)
+   ![Open NQLD.gfx](https://github.com/user-attachments/assets/b094947c-3642-48bc-86ea-2c8c7ddf38f4)  
+4. Apply these settings:  
+   ![CRS settings](https://github.com/user-attachments/assets/49655251-ec08-4177-ba84-a049ed6d42db)
 
-Set the symbology to "categories", select "segmented" as it's value and click "classify".
-Now set the colours for False and other to red and true to green. Set the opacity to 50%.
-![image](https://github.com/user-attachments/assets/4a4f6498-9f6c-497a-8a09-9b500c3dbdce)
+### 2.c Import the Point Clouds
 
-You get something like this when in the process of segmenting:
-![image](https://github.com/user-attachments/assets/6b4051b5-b756-4c28-9885-7c6b333409b5)
+1. Right‑click **Objects → Point Clouds** and choose **Import**.  
+2. Select **all individual tree point clouds** plus the **leftover** point cloud.  
+3. Set CRS to **WGS 84 / UTM zone 55 S**, and **disable** “Combine files.”  
+   ![Import point clouds](https://github.com/user-attachments/assets/56e13ee1-590f-47d9-8419-dd91619e98a7)  
+   ![CRS and combine settings](https://github.com/user-attachments/assets/f3d04ae8-6210-431d-9c71-d55dfcdadf77)
 
-Now go to labels and set them to the following settings (or whatever is readable for you):
-![image](https://github.com/user-attachments/assets/875acf6d-3ded-4fba-8815-6fe6a6d5792b)
+> **Tip:** While the import runs (which can take several minutes), move on to step 3.
 
-Now you have a top view of the trees and you can easily figure out which tree is which while you are segmenting. Whenever a tree is segmented, you toggle the attribute table to true to change it's colour.
+## 3. Generate Crown‐Hull Map of Individual Trees
 
+### 3.a Create the Shapefile
+
+1. Open `Get-shape-file-crowns.Rmd` (on the shares).  
+2. Update the folder paths to point at your individual‐tree point‐cloud directory.  
+3. Run the RMarkdown in RStudio to produce a shapefile of each tree’s crown hull.
+
+### 3.b Configure the Shapefile in QGIS
+
+1. Open the new shapefile in **QGIS**.  
+2. Set the layer CRS to **WGS 84 / UTM zone 55 S**.  
+   ![Layer CRS](https://github.com/user-attachments/assets/94a60f0b-de5d-492d-b1c6-e26bc2833be7)
+
+#### 3.b.i Add a “Segmented” Field
+
+1. Open the **Attribute Table**, click **Edit** (pencil symbol), then **Add Field**.  
+2. Name the field `Segmented` and choose **Boolean**.  
+3. Save edits and exit editing mode by clicking the pencil symbol again.
+   ![Add Segmented field](https://github.com/user-attachments/assets/7463e8b3-0818-434f-8d9d-39df96e7b14a)  
+   ![Field values](https://github.com/user-attachments/assets/de5a331c-5d9e-4a6f-bfab-dcfe368c6544)
+
+#### 3.b.ii Style by Segmentation Status
+
+1. In **Layer Properties → Symbology**, choose **Categorized** and select the `Segmented` field.  
+2. Click **Classify**, then assign **False/NULL** to red and **True** to green. Set opacity to 50%.  
+   ![Symbology settings](https://github.com/user-attachments/assets/4a4f6498-9f6c-497a-8a09-9b500c3dbdce)  
+   ![Interim view](https://github.com/user-attachments/assets/6b4051b5-b756-4c28-9885-7c6b333409b5)
+
+#### 3.b.iii Label Trees for Easy Identification
+
+1. In **Layer Properties → Labels**, enable labeling by tree ID.  
+2. Adjust font size and placement so labels are legible.  
+   ![Label settings](https://github.com/user-attachments/assets/875acf6d-3ded-4fba-8815-6fe6a6d5792b)
+
+You now have a clear top‐down view where each tree is color‑coded by segmentation status and with it's name as label. As you segment a tree, toggle its `Segmented` attribute to **True** to update its color (make sure edit is toggled on as well).  
+
+---
