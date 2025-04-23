@@ -39,4 +39,9 @@ Follow [Part 4 of the general RiSCAN PRO manual](https://github.com/qforestlab/
 5. Run the script.
 6. Expect the process to take **1–2 hours** for one plot.
 
+
+## 3. Select Trees within the AOI (40 × 90 m)
+
+Run all scripts **in order** from the [plot_selection repository](https://github.com/qforestlab/plot_selection) to extract the trees that fall inside the 40 × 90 m AOI.
+
 ---
