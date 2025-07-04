@@ -36,7 +36,7 @@ Follow [Part 4 of the general RiSCAN PRO manual](https://github.com/qforestlab/
 
 1. Clone or navigate to the [treeseg_propagation repository](https://github.com/qforestlab/treeseg_propagation).  
 2. Review the instructions in the README.  
-3. The script you need for this propagation is `tree_extraction.py` ([source link](https://github.com/qforestlab/treeseg_propagation/blob/master/tree_extraction.py)).  
+3. The script you need for this propagation is `tree_extraction.py` ([source link](https://github.com/qforestlab/treeseg_propagation/blob/master/tree_extraction.py)). If you need only a leftover pointcloud and your individual tree pointclouds are good quality and filtered to your liking, you can run ´propagate_predictions.py´.
 4. Set up a Python virtual environment and install the required packages.
 5. Run the script.
 6. Expect the process to take **1–2 hours** for one plot.
