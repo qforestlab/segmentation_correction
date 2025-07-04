@@ -31,7 +31,7 @@ In this step, we correct any missing points in each individual tree point cloud 
 2. Now you have two options:
    - **_(NEW!)_** **Lock** the target tree (the lock icon) and click **Show Selected** (arrow on image). ![Selection area](https://github.com/user-attachments/assets/48a5680a-4583-4378-8be3-afe94ccafa99) It will show only the selected area while the locked tree will stay selected (red colour). 
    - Other option:
-      - Click **Show Selected** (arrow on image), helas, you forgot to lock the tree beforehand... :(
+      - Click **Show Selected** (arrow on image), alas, you forgot to lock the tree beforehand... :(
       - In the Object Inspector, **lock** the target tree (the lock icon)—this won’t affect the next steps but makes it easy to re‑find the tree.
       - Go to **Point Clouds** in the Object Inspector, right‑click and choose **Hide All**. Everything will disappear from the view.
       - Find your locked tree (golden lock icon), unlock it, then click the cloud symbol to **Show** it.
