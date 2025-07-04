@@ -22,7 +22,7 @@ We’re preparing our individual tree point clouds for segmentation by:
 
 1. In the project manager, select your project name.  
 2. Navigate to **Edit → Attributes → Coordinate Reference Systems**.  
-3. In the GeoSysManager database, open **NQLD.gfx** and confirm. (You can find the NQLD.gfx file on the shares.)
+3. In the GeoSysManager database, open **NQLD.gfx** and confirm. (You can find the NQLD.gfx file on the australia shares, if you are working on a different region and using this manual as a guide, make a `.gfx` file for your own UTM Zone by following the steps [here](https://github.com/qforestlab/riscan_registration/blob/main/1.GeoSysManager.md).)
    ![Open NQLD.gfx](https://github.com/user-attachments/assets/b094947c-3642-48bc-86ea-2c8c7ddf38f4)  
 4. Apply these settings:  
    ![CRS settings](https://github.com/user-attachments/assets/49655251-ec08-4177-ba84-a049ed6d42db)
@@ -31,11 +31,11 @@ We’re preparing our individual tree point clouds for segmentation by:
 
 1. Right‑click **Objects → Point Clouds** and choose **Import**.  
 2. Select **all individual tree point clouds** plus the **leftover** point cloud.  
-3. Set CRS to **WGS 84 / UTM zone 55 S**, and **disable** “Combine files.”  
+3. Set CRS to **WGS 84 / UTM zone 55 S** (or a different UTM zone, if not Australia), and **disable** “Combine files.”  
    ![Import point clouds](https://github.com/user-attachments/assets/56e13ee1-590f-47d9-8419-dd91619e98a7)  
    ![CRS and combine settings](https://github.com/user-attachments/assets/f3d04ae8-6210-431d-9c71-d55dfcdadf77)
 
-> **Tip:** While the import runs (which can take several minutes), move on to step 3.
+> **Tip:** While the import runs (which can take several minutes), move on to step 2.
 
 ## 2. Generate Crown‐Hull Map of Individual Trees
 
@@ -48,7 +48,7 @@ We’re preparing our individual tree point clouds for segmentation by:
 ### 2.b Configure the Shapefile in QGIS
 
 1. Open the new shapefile in **QGIS**.  
-2. Set the layer CRS to **WGS 84 / UTM zone 55 S**.  
+2. Set the layer CRS to **WGS 84 / UTM zone 55 S** (or a different UTM zone, if not Australia).  
    ![Layer CRS](https://github.com/user-attachments/assets/94a60f0b-de5d-492d-b1c6-e26bc2833be7)
 
 #### 2.b.i Add a “Segmented” Field
