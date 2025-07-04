@@ -1,8 +1,10 @@
 # Overview
 
-We have individual tree point clouds for all 16 plots from Sylvera, generated using RayCloudTools for instance segmentation and QAed by an external company. Our goal is to use these segmented tree point clouds to extract trees from our own full-plot point clouds. This will give us:
+If you want to do correction of instance segmentation of pointclouds were you **ran RayCloudTools (or other segmentation) yourself, you can skip this step** and use the RayCloudTools generated leftover pointcloud.
 
-- Filtered, individual tree point clouds formatted to our specifications  
+In this case we have individual tree point clouds for all 16 plots from QPRP, Australia. Sylvera generated these using RayCloudTools for instance segmentation and QAed the pointclouds by an external company. Our goal is to use these segmented tree point clouds to extract trees from our own full-plot point clouds. This will give us:
+
+- Filtered, individual tree point clouds formatted to our specifications and filtering
 - A remaining “leftover” point cloud of non-tree points
 
 # Methods
