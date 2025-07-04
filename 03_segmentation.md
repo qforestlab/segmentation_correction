@@ -27,16 +27,20 @@ In this step, we correct any missing points in each individual tree point cloud 
 ## 2. Isolate a Single Tree
 
 1. **Select** an area that fully encloses the target tree (including any missing bits).  
-   ![Selection area](https://github.com/user-attachments/assets/48a5680a-4583-4378-8be3-afe94ccafa99)  
-2. Click **Show Selected** (arrow on image above).  
-3. In the Object Inspector, **lock** the target tree (the lock icon)—this won’t affect the next steps but makes it easy to re‑find the tree later.  
-4. Go to **Point Clouds** in the Object Inspector, right‑click and choose **Hide All**. Everything will disappear from the view.  
-5. Find your locked tree (golden lock icon), unlock it, then click the cloud symbol to **Show** it.  
-   ![Show single tree](https://github.com/user-attachments/assets/94c84807-45f9-495b-9843-0af99b6c9741)  
-6. Use the selection tool to select the target tree.  
-7. Once done, in Object Inspector, right‑click **Point Clouds → Show All** to show the surrounding area again.  
-   Now the target tree is selected, with its surrounding area visible.  
-   ![Isolated tree view](https://github.com/user-attachments/assets/0916bb65-342f-43f9-a358-01f481ef1939)
+  
+2. Now you have two options:
+   - **_(NEW!)_** **Lock** the target tree (the lock icon) and click **Show Selected** (arrow on image). ![Selection area](https://github.com/user-attachments/assets/48a5680a-4583-4378-8be3-afe94ccafa99) It will show only the selected area while the locked tree will stay selected (red colour). 
+   - Other option:
+      - Click **Show Selected** (arrow on image), helas, you forgot to lock the tree beforehand... :(
+      - In the Object Inspector, **lock** the target tree (the lock icon)—this won’t affect the next steps but makes it easy to re‑find the tree.
+      - Go to **Point Clouds** in the Object Inspector, right‑click and choose **Hide All**. Everything will disappear from the view.
+      - Find your locked tree (golden lock icon), unlock it, then click the cloud symbol to **Show** it.
+         ![Show single tree](https://github.com/user-attachments/assets/94c84807-45f9-495b-9843-0af99b6c9741)
+      - Use the selection tool to select the target tree.
+      - Once done, in Object Inspector, right‑click **Point Clouds → Show All** to show the surrounding area again.  
+ 
+> Now the target tree is selected, with its surrounding area visible.  
+![Isolated tree view](https://github.com/user-attachments/assets/0916bb65-342f-43f9-a358-01f481ef1939)
 
 ## 3. Add Missing Pieces
 
