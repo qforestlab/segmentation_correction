@@ -2,7 +2,6 @@
 
 We’re preparing our individual tree point clouds for segmentation by:
 
-- Selecting individual trees within a 40 × 90 m Area of Interest (AOI)  
 - Importing all point clouds into RiSCAN PRO with the correct CRS  
 - Generating crown‐hull shapefiles for each tree  
 - Configuring the shapefile in QGIS for manual segmentation
