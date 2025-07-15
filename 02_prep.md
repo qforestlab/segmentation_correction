@@ -14,14 +14,14 @@ We’re preparing our individual tree point clouds for segmentation by:
 
 1. Open **RiSCAN PRO** and click **New Project**.  
    ![Create new project](https://github.com/user-attachments/assets/047abe2c-e552-45ec-9283-60cea157a84c)  
-2. Save the project locally under a descriptive name.  
+2. Save the project **locally** under a descriptive name.  
    ![Save project](https://github.com/user-attachments/assets/f5c60b46-2ea7-4a8c-9e5d-451cb18ab3d9)
 
 ### 1.b Set the Coordinate Reference System
 
 1. In the project manager, select your project name.  
 2. Navigate to **Edit → Attributes → Coordinate Reference Systems**.  
-3. In the GeoSysManager database, open **NQLD.gfx** and confirm. (You can find the NQLD.gfx file on the australia shares, if you are working on a different region and using this manual as a guide, make a `.gfx` file for your own UTM Zone by following the steps [here](https://github.com/qforestlab/riscan_registration/blob/main/1.GeoSysManager.md).)
+3. In the GeoSysManager database, open **NQLD.gfx** and confirm. (You can find the NQLD.gfx file on the australia shares (called `qfl_australia_tls`), if you are working on a different region and using this manual as a guide, make a `.gfx` file for your own UTM Zone by following the steps [here](https://github.com/qforestlab/riscan_registration/blob/main/1.GeoSysManager.md).)
    ![Open NQLD.gfx](https://github.com/user-attachments/assets/b094947c-3642-48bc-86ea-2c8c7ddf38f4)  
 4. Apply these settings:  
    ![CRS settings](https://github.com/user-attachments/assets/49655251-ec08-4177-ba84-a049ed6d42db)
@@ -29,7 +29,7 @@ We’re preparing our individual tree point clouds for segmentation by:
 ### 1.c Import the Point Clouds
 
 1. Right‑click **Objects → Point Clouds** and choose **Import**.  
-2. Select **all individual tree point clouds** plus the **leftover** point cloud.  
+2. Select **all individual tree point clouds** plus the **leftover** point cloud. (The point clouds can also be found on the qfl_australia_tls shares)
 3. Set CRS to **WGS 84 / UTM zone 55 S** (or a different UTM zone, if not Australia), and **disable** “Combine files.”  
    ![Import point clouds](https://github.com/user-attachments/assets/56e13ee1-590f-47d9-8419-dd91619e98a7)  
    ![CRS and combine settings](https://github.com/user-attachments/assets/f3d04ae8-6210-431d-9c71-d55dfcdadf77)
@@ -40,8 +40,8 @@ We’re preparing our individual tree point clouds for segmentation by:
 
 ### 2.a Create the Shapefile
 
-1. Open `Get-shape-file-crowns.Rmd` (on the shares).  
-2. Update the folder paths to point at your individual‐tree point‐cloud directory.  
+1. Open `Get-shape-file-crowns.Rmd` (on the qfl_australia_tls shares, under the folder "scripts").  
+2. Update the folder paths to point at the individual‐tree point‐cloud directory (make sure the full plot point cloud is not in the same folder).  
 3. Run the RMarkdown in RStudio to produce a shapefile of each tree’s crown hull.
 
 ### 2.b Configure the Shapefile in QGIS
