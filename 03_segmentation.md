@@ -44,9 +44,9 @@ In this step, we correct any missing points in each individual tree point cloud 
 
 ## 3. Add Missing Pieces
 
-1. Apply the **Height Filter**.  
+1. Apply the **Height Filter** (image below, indicated with red arrows).  
 2. Starting at the bottom of the target tree, go through the tree looking for missing parts.  
-   ![Height‑filtered view](https://github.com/user-attachments/assets/7e837ddd-c839-4328-823a-898f9082a0b8)  
+   <img width="3827" height="2088" alt="435991877-7e837ddd-c839-4328-823a-898f9082a0b8" src="https://github.com/user-attachments/assets/c4ff6073-c13c-4212-a637-9e934bfa0f4d" /> 
 3. Select the missing trunk sections, large branches, or stem growth features.  
    - You can skip isolated floating points or very small twigs unless they affect height or crown area.  
    - For example: The darker red branches were missing and selected.  
