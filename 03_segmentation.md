@@ -75,7 +75,8 @@ In this step, we correct any missing points in each individual tree point cloud 
 
 ## 5. Repeat for Each Tree
 
-Repeat steps 2–4 for every tree in the plot until all individual clouds are corrected.
+Repeat steps 2–4 for every tree in the plot until all individual clouds are corrected. 
+To make sure no work is lost if you work locally, save the individual point clouds along the way by moving on to step 6.2 and 6.3.
 
 ## 6. Export All Point Clouds
 
