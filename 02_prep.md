@@ -57,7 +57,8 @@ We’re preparing our individual tree point clouds for segmentation by:
    
    Some versions of QGIS do not have the option Boolean (see screenshot). In that case, work with an integer and use 0 and 1 for false and true.
    <img width="1588" height="969" alt="image" src="https://github.com/user-attachments/assets/14d34217-8c06-431f-acd6-66aa8ada9ae5" />
-3. Save edits and exit editing mode by clicking the pencil symbol again.
+3. Also add a field `Notes` and choose **Text** as the type.
+4. Save edits and exit editing mode by clicking the pencil symbol again.
    ![Add Segmented field](https://github.com/user-attachments/assets/7463e8b3-0818-434f-8d9d-39df96e7b14a)  
    ![Field values](https://github.com/user-attachments/assets/de5a331c-5d9e-4a6f-bfab-dcfe368c6544)
 
