@@ -35,6 +35,13 @@ We’re preparing our individual tree point clouds for segmentation by:
    ![CRS and combine settings](https://github.com/user-attachments/assets/f3d04ae8-6210-431d-9c71-d55dfcdadf77)
 
 > **Tip:** While the import runs (which can take several minutes), move on to step 2.
+---
+##Intermezzo - Quote of the Notebook
+
+> *"What gets segmented, gets understood."*  
+> — TLS Rule #1
+
+---
 
 ## 2. Generate Crown‐Hull Map of Individual Trees
 
