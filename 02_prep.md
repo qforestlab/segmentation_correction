@@ -36,7 +36,7 @@ We’re preparing our individual tree point clouds for segmentation by:
 
 > **Tip:** While the import runs (which can take several minutes), move on to step 2.
 ---
-##Intermezzo - Quote of the Notebook
+## Intermezzo - Quote of the Notebook
 
 > *"What gets segmented, gets understood."*  
 > — TLS Rule #1
