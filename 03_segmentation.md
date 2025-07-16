@@ -9,8 +9,7 @@ In this step, we correct any missing points in each individual tree point cloud 
 - Exporting all corrected point clouds at the end
 
 ---
-# Intermezzo
-## Quote of the Notebook
+## Intermezzo - Quote of the Notebook
 
 > *"To see the forest in 3D, one must scan every tree."*  
 > — Overly poetic TLS researcher
