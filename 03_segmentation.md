@@ -9,6 +9,13 @@ In this step, we correct any missing points in each individual tree point cloud 
 - Exporting all corrected point clouds at the end
 
 ---
+# Intermezzo
+## Quote of the Notebook
+
+> *"To see the forest in 3D, one must scan every tree."*  
+> — Overly poetic TLS researcher
+
+---
 
 # Methods
 
@@ -47,8 +54,10 @@ In this step, we correct any missing points in each individual tree point cloud 
 1. Apply the **Height Filter** (image below, indicated with red arrows).  
 2. Starting at the bottom of the target tree, go through the tree looking for missing parts.  
    <img width="3827" height="2088" alt="435991877-7e837ddd-c839-4328-823a-898f9082a0b8" src="https://github.com/user-attachments/assets/c4ff6073-c13c-4212-a637-9e934bfa0f4d" /> 
-3. Select the missing trunk sections, large branches, or stem growth features.  
-   - You can skip isolated floating points or very small twigs unless they affect height or crown area.  
+3. Select the missing trunk sections, large branches, or other missing features.  
+   - You can skip isolated floating points or very small twigs unless they affect height or crown area.
+   - Make sure to select the full butresses of trees as they are often cut off.
+   - We chose to not add epiphytes or lianas growing on the trees to the individual tree pointclouds. If needed and possible you can segment those out (sometimes  the difference between epiphytes and crown will not be clear, in that case you can leave them).
    - For example: The darker red branches were missing and selected.  
      ![Select missing branches](https://github.com/user-attachments/assets/06389ec4-ace8-4a23-94c7-f5396da48261)  
 4. When finished scanning from bottom to top, click **Show Selected**.  
@@ -72,11 +81,12 @@ In this step, we correct any missing points in each individual tree point cloud 
    ![Restore view](https://github.com/user-attachments/assets/66fec52d-449e-4bad-a208-5a7bc1a99dee)  
 5. In your QGIS map, toggle the tree’s `Segmented` attribute to **True**.  
    ![Toggle segmented](https://github.com/user-attachments/assets/b566e314-5415-4c1c-9e5c-e893f20b3b01)
+6. If you noticed anything special about the trees (e.g. special trunk shape, broken, dead...) write a note about it in the `Notes` field in QGIS.
 
 ## 5. Repeat for Each Tree
 
 Repeat steps 2–4 for every tree in the plot until all individual clouds are corrected. 
-To make sure no work is lost if you work locally, save the individual point clouds along the way by moving on to step 6.2 and 6.3.
+To make sure no work is lost when you work locally, save the individual point clouds along the way by moving on to step 6.2 and 6.3.
 
 ## 6. Export All Point Clouds
 
@@ -88,3 +98,6 @@ Once you’ve corrected every tree in the plot:
    ![Export settings](https://github.com/user-attachments/assets/6dd63e4e-0af2-486e-a8c5-10a3b2c4ff36)
 
 ---
+☁️ You’ve unlocked the final blessing. Go forth and process with confidence.
+> *"May your clouds be dense and your normals be clean."*  
+> — Blessing from the LiDAR gods
