@@ -29,7 +29,9 @@ We’re preparing our individual tree point clouds for segmentation by:
 ### 1.c Import the Point Clouds
 
 1. Right‑click **Objects → Point Clouds** and choose **Import**.  
-2. Select **all individual tree point clouds** plus the **leftover** point cloud. (The point clouds can also be found on the qfl_australia_tls shares)
+2. Select all individual tree point clouds in the **selected_trees folder** and import them with the "Combine files" toggled off. Also import the **leftover** point cloud to be found in the Propagation folder with a name formatted like this: `2024-08-14_ep31_woopen_creek_ds1cm_20mbuffer_propagated.las`. And finally, import the trees that are outside the 40x90m AOI, to be found in the folder **trees_outside**, for these trees make sure to **toggle ON "Combine files"!** (The point clouds can be found on the qfl_australia_tls shares)
+<img width="1908" height="1130" alt="image" src="https://github.com/user-attachments/assets/0c672894-bc4a-47bb-8dcc-e976b8d63451" />
+
 3. Set CRS to **WGS 84 / UTM zone 55 S** (or a different UTM zone, if not Australia), and **disable** “Combine files.”  
    ![Import point clouds](https://github.com/user-attachments/assets/56e13ee1-590f-47d9-8419-dd91619e98a7)  
    ![CRS and combine settings](https://github.com/user-attachments/assets/f3d04ae8-6210-431d-9c71-d55dfcdadf77)
