@@ -49,7 +49,7 @@ We’re preparing our individual tree point clouds for segmentation by:
 
 ### 2.a Create the Shapefile
 
-1. Open `Get-shape-file-crowns.Rmd` (on the qfl_australia_tls shares, under the folder "scripts").  
+1. Open `Get-shape-file-crowns.Rmd` (In this repo at [link](https://github.com/qforestlab/segmentation_correction/blob/main/get_crown_shape.Rmd) or on the qfl_australia_tls shares, under the folder "scripts").  
 2. Update the folder paths to point at the individual‐tree point‐cloud directory (make sure the full plot point cloud is not in the same folder).  
 3. Run the RMarkdown in RStudio to produce a shapefile of each tree’s crown hull.
 
