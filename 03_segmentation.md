@@ -74,7 +74,7 @@ In this step, we correct any missing points in each individual tree point cloud 
 3. In the dialog:  
    - **Enable** “Move to new file” (not “Copy To”)  
    - **Enable** “Combine data”  
-   - Rename the point cloud to the correct tree ID + _cor (output name)  
+   - Rename the point cloud to the correct tree ID  (output name) + _cor (output suffix)
    - Ensure **all point attribute options** are selected  
    ![Copy settings](https://github.com/user-attachments/assets/a3fd19c9-7060-4719-b7a6-d9b1f41d95e3)  
 4. Click **OK**, then **Show All** to restore the full project view.  
