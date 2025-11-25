@@ -35,7 +35,7 @@ In this step, we correct any missing points in each individual tree point cloud 
 1. **Select** an area that fully encloses the target tree (including any missing bits).  
   
 2. Now you have two options:
-   - **_(NEW!)_** **Lock** the target tree (the lock icon) and click **Show Selected** (arrow on image). ![Selection area](https://github.com/user-attachments/assets/48a5680a-4583-4378-8be3-afe94ccafa99) It will show only the selected area while the locked tree will stay selected (red colour). 
+   - **_(NEW!)_** **Lock** the target tree (the lock icon) and click **Show Selected** (arrow on image). ![Selection area](https://github.com/user-attachments/assets/48a5680a-4583-4378-8be3-afe94ccafa99) It will show only the selected area while the locked tree will stay selected (red colour). You can unlock the tree now.
    - Other option:
       - Click **Show Selected** (arrow on image), alas, you forgot to lock the tree beforehand... :(
       - In the Object Inspector, **lock** the target tree (the lock icon)—this won’t affect the next steps but makes it easy to re‑find the tree.
@@ -50,17 +50,18 @@ In this step, we correct any missing points in each individual tree point cloud 
 
 ## 3. Add Missing Pieces
 
-1. Apply the **Height Filter** (image below, indicated with red arrows).  
-2. Starting at the bottom of the target tree, go through the tree looking for missing parts.  
+1. Take an overall look at the target tree, is anything large missing? (e.g. the parts describes in step 4 below). If nothing seems to be missing continue with step 5. Otherwise continue with all steps.
+2. Apply the **Height Filter** (image below, indicated with red arrows).  
+3. Starting at the bottom of the target tree, go through the tree looking for missing parts.  
    <img width="3827" height="2088" alt="435991877-7e837ddd-c839-4328-823a-898f9082a0b8" src="https://github.com/user-attachments/assets/c4ff6073-c13c-4212-a637-9e934bfa0f4d" /> 
-3. Select the missing trunk sections, large branches, or other missing features.  
+4. Select the missing trunk sections, large branches, or other missing features. Feel free to also deselect things from the target tree in this step if they don't seem to belong to the tree.
    - You can skip isolated floating points or very small twigs unless they affect height or crown area.
    - Make sure to select the full butresses of trees as they are often cut off.
    - We chose to not add epiphytes or lianas growing on the trees to the individual tree pointclouds. If needed and possible you can segment those out (sometimes  the difference between epiphytes and crown will not be clear, in that case you can leave them).
    - For example: The darker red branches were missing and selected.  
      ![Select missing branches](https://github.com/user-attachments/assets/06389ec4-ace8-4a23-94c7-f5396da48261)  
-4. When finished scanning from bottom to top, click **Show Selected**.  
-5. Inspect your selection for mistakes (e.g., stray points from neighboring trees).  
+5. When finished scanning from bottom to top, click **Show Selected**.  
+6. Inspect your selection for mistakes (e.g., stray points from neighboring trees). Remove all mistakes. You can remove all parts that do not belong to the target tree.
    - It’s often faster to include extra points and then remove outliers in this step.  
    - For example: the points circled in red will be removed later.  
      ![Remove outliers](https://github.com/user-attachments/assets/d822a88f-8655-4947-a9e3-d2f60cba3472)
@@ -73,14 +74,14 @@ In this step, we correct any missing points in each individual tree point cloud 
 3. In the dialog:  
    - **Enable** “Move to new file” (not “Copy To”)  
    - **Enable** “Combine data”  
-   - Rename the point cloud to the correct tree ID (output name)  
+   - Rename the point cloud to the correct tree ID + _cor (output name)  
    - Ensure **all point attribute options** are selected  
    ![Copy settings](https://github.com/user-attachments/assets/a3fd19c9-7060-4719-b7a6-d9b1f41d95e3)  
 4. Click **OK**, then **Show All** to restore the full project view.  
    ![Restore view](https://github.com/user-attachments/assets/66fec52d-449e-4bad-a208-5a7bc1a99dee)  
 5. In your QGIS map, toggle the tree’s `Segmented` attribute to **True**.  
    ![Toggle segmented](https://github.com/user-attachments/assets/b566e314-5415-4c1c-9e5c-e893f20b3b01)
-6. If you noticed anything special about the trees (e.g. special trunk shape, broken, dead...) write a note about it in the `Notes` field in QGIS.
+6. If you noticed anything special about the trees (e.g. special trunk shape, broken, dead (vertical or horizontal), palm...) write a note about it in the `Notes` field in QGIS.
 
 ## 5. Repeat for Each Tree
 
