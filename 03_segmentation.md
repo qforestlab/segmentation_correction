@@ -27,8 +27,11 @@ In this step, we correct any missing points in each individual tree point cloud 
    ![RiSCAN PRO view](https://github.com/user-attachments/assets/4e29cedc-a930-47e9-a9a0-32bc3971afdc)  
 5. Based on the QGIS map and the point clouds, select your target tree. In the following example the green tree was chosen as the target tree. Thanks to the QGIS hull map, it was easy to figure out that it is tree number 369460_8074920_08.  
    ![RiSCAN target tree](https://github.com/user-attachments/assets/a9bd0f49-5fb5-4827-a345-daa5a6c7383c)  
-   ![QGIS map](https://github.com/user-attachments/assets/88194c10-0911-4135-8fb8-0ddb544c6352)  
-6. If necessary, change the colours of the point clouds for good visibility. In this example, the leftover point cloud colour was changed to height‐above‐ground (blue shades) and the target tree to bright yellow.
+   ![QGIS map](https://github.com/user-attachments/assets/88194c10-0911-4135-8fb8-0ddb544c6352)
+
+   **! Extra way to easily find a tree:**
+   In **Object Inspector** right click on the target tree, then hover over view, it will now show a dropdown menu. Choose the option **bird's eye view**, the viewer will immediately **zoom to the the target tree and display it from the top**.
+7. If necessary, change the colours of the point clouds for good visibility. In this example, the leftover point cloud colour was changed to height‐above‐ground (blue shades) and the target tree to bright yellow.
 
 ## 2. Isolate a Single Tree
 
