@@ -71,7 +71,7 @@ In this step, we correct any missing points in each individual tree point cloud 
 
 ## 4. Save the Corrected Tree Point Cloud
 
-1. Once finished, select the full tree.  
+1. Once finished, select the full tree. cntrl+A
    ![Full-tree selection](https://github.com/user-attachments/assets/b50dbbce-902e-4473-b96e-1de5ae2ca3da)  
 2. With your full‑tree selection active, click **Copy Selection with Filter Settings** (cloud icon dropdown).  
 3. In the dialog:  
