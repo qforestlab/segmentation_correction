@@ -45,6 +45,20 @@ We’re preparing our individual tree point clouds for segmentation by:
 
 ---
 
+## Additional Step - CHECK IF YOUR POINTCLOUDS WERE FILTERED
+Due to small issue, some of the pointclouds we are working with for the australia project, had the filtering undone.
+Please make sure to check if all pointclouds are filtered by following the next steps:
+
+1. Open (some of) your pointclouds in the viewer and colour them by reflectance. Set the min/max values to -20 and 5dB. Make the colour gradient grayscale and the color below/above bright colours. Click OK.
+<img width="882" height="657" alt="image" src="https://github.com/user-attachments/assets/9b534e54-b795-4c6c-9fe3-81c78271cae8" />
+
+2. If your pointclouds are unfiltered, there will be colours in the pointcloud. eg green
+
+<img width="1831" height="1501" alt="image" src="https://github.com/user-attachments/assets/941ce8e6-10a3-41de-b31f-84e57be054c9" />
+
+"to be continued"
+
+---
 ## 2. Generate Crown‐Hull Map of Individual Trees
 
 ### 2.a Create the Shapefile
