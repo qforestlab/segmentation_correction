@@ -52,11 +52,30 @@ Please make sure to check if all pointclouds are filtered by following the next 
 1. Open (some of) your pointclouds in the viewer and colour them by reflectance. Set the min/max values to -20 and 5dB. Make the colour gradient grayscale and the color below/above bright colours. Click OK.
 <img width="882" height="657" alt="image" src="https://github.com/user-attachments/assets/9b534e54-b795-4c6c-9fe3-81c78271cae8" />
 
-2. If your pointclouds are unfiltered, there will be colours in the pointcloud. eg green
+2. Check the reflectance pointclouds.
+
+   a. If your pointclouds are **filtered**, no colours will be shown. You can then move to **2. Generate Crown-Hull Map of Individual Trees**.
+
+<img width="1242" height="1227" alt="image" src="https://github.com/user-attachments/assets/1f7190c9-09e8-4006-abe2-86f02711d719" />
+   
+   b. If your pointclouds are **unfiltered**, there will be colours in the pointcloud - eg green or red. Then go to the following additional step (3).
 
 <img width="1831" height="1501" alt="image" src="https://github.com/user-attachments/assets/941ce8e6-10a3-41de-b31f-84e57be054c9" />
 
-"to be continued"
+3. Your pointclouds are unfiltered. Follow step **3. Filter scans** of the [RiSCAN Registration Manual - 3. Automatic Registration 2](https://github.com/qforestlab/riscan_registration/blob/main/3.automatic_registration2.md), which is detailed below.
+
+Open the One-Touch Processing Wizard
+
+Check the box for Filter Scans and use the following settings:
+
+Keep all echoes per laser shot
+- Delete all point with a reflectance below -20 dB
+- Delete all point with a reflectance above 5 dB
+- Delete all point with a deviation above 20 (the deviation filter can vary, but is generally in the 12 to 20 range). Make sure to document this value.
+
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/51d6bb79-3b93-4903-b99d-f62a0ca1cd4b" />
+
+Your pointclouds are now filtered. You can then move to **2. Generate Crown-Hull Map of Individual Trees**.
 
 ---
 ## 2. Generate Crown‐Hull Map of Individual Trees
