@@ -6,4 +6,5 @@ This tutorial is broken into two main steps:
 1. CloudCompare overview and project set up
 2. Segment/merge/save
 
-If you have any questions or edits, feel free to reach out to Zane Cooper (zane.cooper@ugent.be)
+### A video using the available demo data can be found via the below link:
+https://ugent.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=80bf1172-fb36-43ef-9196-b3b400a4b038
