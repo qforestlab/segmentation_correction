@@ -19,11 +19,14 @@ We’re preparing our individual tree point clouds for segmentation by:
 
 ### 1.b Set the Coordinate Reference System
 
-1. In the project manager, select your project name.  
-2. Navigate to **Edit → Attributes → Coordinate Reference Systems**.  
-3. In the GeoSysManager database, open **NQLD.gfx** and confirm. (You can find the NQLD.gfx file on the australia shares (called `qfl_australia_tls`), if you are working on a different region and using this manual as a guide, make a `.gfx` file for your own UTM Zone by following the steps [here](https://github.com/qforestlab/riscan_registration/blob/main/1.GeoSysManager.md).)
+1. In the project manager, select your project name.
+
+<img width="1644" height="952" alt="image" src="https://github.com/user-attachments/assets/dd88943b-f5fc-4463-abb5-8e72def61ec5" />
+
+3. Navigate to **Edit → Attributes → Coordinate Reference Systems**.  
+4. In the GeoSysManager database, open **NQLD.gfx** and confirm. (You can find the NQLD.gfx file on the australia shares (called `qfl_australia_tls`), if you are working on a different region and using this manual as a guide, make a `.gfx` file for your own UTM Zone by following the steps [here](https://github.com/qforestlab/riscan_registration/blob/main/1.GeoSysManager.md).)
    ![Open NQLD.gfx](https://github.com/user-attachments/assets/b094947c-3642-48bc-86ea-2c8c7ddf38f4)  
-4. Apply these settings:  
+5. Apply these settings:  
    ![CRS settings](https://github.com/user-attachments/assets/49655251-ec08-4177-ba84-a049ed6d42db)
 
 ### 1.c Import the Point Clouds
